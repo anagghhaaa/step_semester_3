@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "FindMinimumRotatedSortedArray",
+            "request": "launch",
+            "mainClass": "Assignment.FindMinimumRotatedSortedArray",
+            "projectName": "step_sem_3_8d827d36"
+        },
+        {
+            "type": "java",
+            "name": "SubarraySumEqualsK",
+            "request": "launch",
+            "mainClass": "Assignment.SubarraySumEqualsK",
+            "projectName": "step_sem_3_8d827d36"
+        },
+        {
+            "type": "java",
+            "name": "ThreeSum",
+            "request": "launch",
+            "mainClass": "Assignment.ThreeSum",
+            "projectName": "step_sem_3_8d827d36"
+        },
+        {
+            "type": "java",
+            "name": "MaximumSubarray",
+            "request": "launch",
+            "mainClass": "Assignment.MaximumSubarray",
+            "projectName": "step_sem_3_8d827d36"
+        },
+        {
+            "type": "java",
+            "name": "ProductOfArrayExceptSelf",
+            "request": "launch",
+            "mainClass": "ProductOfArrayExceptSelf",
+            "projectName": "step_sem_3_8d827d36"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
