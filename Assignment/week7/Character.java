@@ -16,6 +16,8 @@ public class Character {
         }
     }
 
+
+    
     public void heal(int amount) {
         health = health + amount;
 
