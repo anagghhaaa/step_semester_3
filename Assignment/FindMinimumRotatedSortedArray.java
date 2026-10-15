@@ -1,19 +1,24 @@
 import java.util.Scanner;
 
-class ContainsDuplicate {
+class FindMinimumRotatedSortedArray {
 
-    static boolean containsDuplicate(int[] nums) {
+    static int findMin(int[] nums) {
 
-        for (int i = 0; i < nums.length; i++) {
+        int left = 0;
+        int right = nums.length - 1;
 
-            for (int j = i + 1; j < nums.length; j++) {
+        while (left < right) {
 
-                if (nums[i] == nums[j])
-                    return true;
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            } else {
+                right = mid;
             }
         }
 
-        return false;
+        return nums[left];
     }
 
     public static void main(String[] args) {
@@ -30,7 +35,7 @@ class ContainsDuplicate {
             nums[i] = sc.nextInt();
         }
 
-        System.out.println(containsDuplicate(nums));
+        System.out.println("Minimum element: " + findMin(nums));
 
         sc.close();
     }
