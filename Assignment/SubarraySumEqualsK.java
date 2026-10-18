@@ -1,18 +1,28 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
-class RotateArray {
+class SubarraySumEqualsK {
 
-    static int[] rotateArray(int[] nums, int k) {
+    static int subarraySum(int[] nums, int k) {
 
-        k = k % nums.length;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
 
-        int[] newArray = new int[nums.length];
+        int sum = 0;
+        int count = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            newArray[(i + k) % nums.length] = nums[i];
+
+            sum = sum + nums[i];
+
+            if (map.containsKey(sum - k)) {
+                count = count + map.get(sum - k);
+            }
+
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
 
-        return newArray;
+        return count;
     }
 
     public static void main(String[] args) {
@@ -32,12 +42,7 @@ class RotateArray {
         System.out.print("Enter k: ");
         int k = sc.nextInt();
 
-        int[] result = rotateArray(nums, k);
-
-        System.out.println("Rotated array:");
-        for (int x : result) {
-            System.out.print(x + " ");
-        }
+        System.out.println("Number of subarrays: " + subarraySum(nums, k));
 
         sc.close();
     }
